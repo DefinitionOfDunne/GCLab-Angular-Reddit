@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Angular Demo</title>
-    <!-- Our CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -16,23 +15,29 @@
         <a href="#!/cute">Cute Stuff</a>
     </nav>
     <ng-view></ng-view>
-    <div id="page-container">
-        <h1 id="page-title">R/Aww Randomizer</h1>
-        <div id="data-content">{{folks}}</div>
-        <div id="data-subtitle"></div>
-        <div id="data-author"></div>
-        <img src="" alt="Reddit Image" id="data-image">
-        <p id="comments-label">Total Comments:</p>
-        <a id="comments-link" href="">
-            <div id="comments"></div>
-        </a>
-        <!-- Include Angular and UI.Bootstrap -->
-        <script src="lib/angular.min.js" charset="utf-8"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-route.min.js"></script>
-        <!-- Our Scripts -->
-        <script src="js/app.js" charset="utf-8"></script>
-        <script src="js/mainController.js"></script>
-        <script src="js/dataService.js"></script>
+    <table class="table" ng-controller="mainController">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in cute">
+                <td><a href="https://reddit.com{{item.data.permalink}}"><img ng-src="{{item.data.thumbnail}}" id="data-image"></a></td>
+                <td id="data-subtitle">{{item.data.title}}</td>
+                <td id="data-author">{{item.data.author}}</td>
+                <td id="comments">{{item.data.num_comments}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="lib/angular.min.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-route.min.js"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+    <script src="js/mainController.js"></script>
+    <script src="js/dataService.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Handlee');
+
+body {
+    box-sizing: border-box;
+    font-size: 100%;
+    text-align: center;
+    font-family: 'Handlee', cursive;
+    color: gray;
+    background-color: rgba(169, 230, 255, 0.95);
+}
+
+a:link {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+input {
+    width: 15em;
+}
+
+#page-title {
+    font-size: 4em;
+    font-variant: small-caps;
+}
+
+#data-content {
+    font-size: 1.8em;
+    margin: 1em 0;
+}
+
+#data-image {
+    width: 10em;
+    border: 5px solid gray;
+    border-radius: 10%;
+    margin: 4em;
+}
+
+#data-author {
+    font-size: 1.5em;
+    margin: 1em 0;
+}
+#comments{
+    background-color: white;
+    color: gray;
+    width: 2em;
+    height: 2em;
+    margin: .75em auto;
+    line-height: 2em;
+    border-radius: 50%;
+    border: 3px solid;
+}
+#comments:hover {
+    color: white;
+    background-color: gray;
+}
+#comments-label {
+    font-size: 2em;
+}
+
+#comments-link {
+    font-size: 5em;
+}
+
+#refresh {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: gray;
+    cursor: pointer;
+    padding: 25px 80px;
+    display: inline-block;
+    margin: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: fixed;
+    top: 70%;
+    left: 0;
+    border: 3px solid #fff;
+    color: #fff;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#refresh:hover,
+#refresh:active {
+    color: gray;
+    background: white;
+    border: 1px solid gray;
+}
